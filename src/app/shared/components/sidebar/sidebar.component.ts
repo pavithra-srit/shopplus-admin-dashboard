@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -12,6 +12,7 @@ import {MatListItem} from '@angular/material/list';
     imports: [MatListModule, RouterModule, MatListItem,
         MatSidenavModule, MatIconButton, MatIcon, MatSidenavContent, RouterLink],
     templateUrl: './sidebar.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
