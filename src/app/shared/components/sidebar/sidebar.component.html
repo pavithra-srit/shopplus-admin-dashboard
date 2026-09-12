@@ -1,24 +1,33 @@
 <mat-sidenav-container class="container" >
-    <mat-sidenav mode="side" opened class="sidenav">
+    <mat-sidenav mode="side" opened class="sidenav" [style.width]="sideNavWidth()">
         <mat-nav-list>
-            <a mat-list-item routerLink="/dashboard" >
+          
+            <a mat-list-item  (click)="gotodashboard()">
             <mat-icon matListItemIcon>dashboard</mat-icon>
-                <span>Dashboard</span></a>
+              @if(showNavLabels()){
+                <span>Dashboard</span>}</a>
+              
             <a mat-list-item routerLink="/products" >
                 <mat-icon matListItemIcon>inventory</mat-icon>
-                <span>Product Management</span></a>
+                  @if(showNavLabels()){
+                    <span>Product Management</span>}</a>
+              
             <a mat-list-item routerLink="/orders" >
                 <mat-icon matListItemIcon>shopping-cart</mat-icon>
-                <span>Order Management</span></a>
+                  @if(showNavLabels()){
+                 <span>Order Management</span>}</a>
             <a mat-list-item routerLink="/customers" >
                 <mat-icon matListItemIcon>people</mat-icon>
-                <span>Customer Management</span></a>
+                            @if(showNavLabels()){
+                         <span>Customer Management</span>}</a>
             <a mat-list-item routerLink="/analytics" >
                 <mat-icon matListItemIcon>analytics</mat-icon>
-                <span>Analytics</span></a>
+                            @if(showNavLabels()){
+                 <span>Analytics</span>}</a>
         </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content [style.margin-left]="sideNavWidth()">
+        <!-- <roter-outlet></router-outlet> -->
     </mat-sidenav-content>
 </mat-sidenav-container>

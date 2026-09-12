@@ -1,7 +1,8 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy , inject} from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { NavService } from '../../service/nav.service';
 
 @Component({
     selector: 'app-header',
@@ -11,5 +12,5 @@ import { MatButtonModule } from '@angular/material/button';
     styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+ navService = inject(NavService);
 }
