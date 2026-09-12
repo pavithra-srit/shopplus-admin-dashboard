@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, computed, inject } from '@angular/core';
+import { NavService } from '../../shared/service/nav.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -8,5 +9,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
+//   navService = inject(NavService);
 
+//   dashBoardWidth = computed(() =>
+//     this.navService.isCollapsed() ?  'calc(100vw - 310px)' :'calc(100vw - 120px)'
+//   );
 }

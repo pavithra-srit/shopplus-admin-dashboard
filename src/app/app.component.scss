@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: block;
+  background: rgb(240, 242, 243);
+  min-height: calc(100vh - 64px);
+  transition: width 0.3s ease;
+  width: calc(100% - 60px);
+  max-width: calc(100% - 60px);
+}
+
+:host ::ng-deep router-outlet + * {
+  display: block;
+  width: 100%;
+  min-height: calc(100vh - 64px);
+}
